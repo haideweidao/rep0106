@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: sibd-mp-springboot
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/db0104?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&useSSL=false
+    username: root
+    password: root
+mybatis-plus:
+  mapper-locations: classpath*:mybatis/*.xml
+  type-aliases-package: com.sibd.mp.pojo
+  global-config:
+    db-config:
+      table-prefix: tb_
+      logic-not-delete-value: 0
+      logic-delete-value: 1
